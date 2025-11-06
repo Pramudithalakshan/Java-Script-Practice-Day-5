@@ -17,10 +17,10 @@ document.querySelector("#btnSubmit").addEventListener("click", () => {
     }
     customerList.push(customer);
     console.log(customerList);
-    loadTable();
+    loadCusTable();
 });
 
-function loadTable() {
+function loadCusTable() {
     let body = ` 
         <tr>
             <td>Name</td>
@@ -28,7 +28,7 @@ function loadTable() {
             <td>Phone</td>
         </tr>`
     customerList.forEach(customer => {
-         body+=`
+        body += `
           <tr>
             <td>${customer.name}</td>
             <td>${customer.email}</td>
@@ -37,5 +37,5 @@ function loadTable() {
          `
     });
 
-    document.getElementById("table").innerHTML=body;
+    document.getElementById("table").innerHTML = body;
 }
